@@ -71,8 +71,8 @@ echo 'fastestmirror=1' >> /etc/dnf/dnf.conf
 # Step 2. Downloads and caches metadata of the packages
 dnf makecache
 
-# Step 3. Install `man`
-dnf install -y man
+# Step 3. Install `man` and `man-pages`
+dnf install -y man man-pages
 
 # Step 4. Reinstall all packages to get document/manual
 for pkg in $(dnf repoquery --installed --qf "%{name}"); do dnf reinstall -qy $pkg; done
