@@ -109,5 +109,15 @@ wsl --export <distribution-name> <tar-file-name>
 ```
 
 ## See Also
+## Some missing packages
+
+The container-base edition of Fedora does not have some necessary packages, you should install them by yourself.
+
+### passwd support
+
+```
+dnf install -y cracklib-dicts passwd
+```
+
 ### Fedora Remix for WSL
 If the recipe is hard for you, I recommend to use [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL). You can download it on the Microsoft Store.
